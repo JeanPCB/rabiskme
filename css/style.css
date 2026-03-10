@@ -1,18 +1,13 @@
 :root {
-  --primary-bg-color: #e3f2fd;
-  --secondary-bg-color: #db5461;
-  --primary-color: #fafafa;
-  /* 
-   * Another colors on palette:
-   * #686963
-   * #8aa29e
-   */
+  --bg-primary-color: #e3f2fd;
+  --bg-secondary-color: #d1d5db;
+  --primay-color: #1e2939;
 
   /* 
    * Fluid Type Scale — clamp(MIN, FLUID, MAX)
    * Scales smoothly from 320px → 1440px viewport
    * Base: 16px → 18px
-   */
+  */
   --text-xs: clamp(0.64rem, 0.55rem + 0.46vw, 0.78rem); /* ~10px → 14px */
   --text-sm: clamp(0.8rem, 0.71rem + 0.46vw, 0.89rem); /* ~13px → 16px */
   --text-base: clamp(1rem, 0.93rem + 0.36vw, 1.13rem); /* ~16px → 18px */
