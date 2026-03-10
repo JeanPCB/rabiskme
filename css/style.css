@@ -2,10 +2,27 @@
   --primary-bg-color: #e3f2fd;
   --secondary-bg-color: #db5461;
   --primary-color: #fafafa;
-  /* * Another colors on palette:
-  * #686963
-  * #8aa29e
-  * */
+  /* 
+   * Another colors on palette:
+   * #686963
+   * #8aa29e
+   */
+
+  /* 
+   * Fluid Type Scale — clamp(MIN, FLUID, MAX)
+   * Scales smoothly from 320px → 1440px viewport
+   * Base: 16px → 18px
+   */
+  --text-xs: clamp(0.64rem, 0.55rem + 0.46vw, 0.78rem); /* ~10px → 14px */
+  --text-sm: clamp(0.8rem, 0.71rem + 0.46vw, 0.89rem); /* ~13px → 16px */
+  --text-base: clamp(1rem, 0.93rem + 0.36vw, 1.13rem); /* ~16px → 18px */
+  --text-md: clamp(1.13rem, 1.01rem + 0.58vw, 1.38rem); /* ~18px → 22px */
+  --text-lg: clamp(1.27rem, 1.09rem + 0.88vw, 1.73rem); /* ~20px → 28px */
+  --text-xl: clamp(1.42rem, 1.15rem + 1.38vw, 2.16rem); /* ~23px → 35px */
+  --text-2xl: clamp(1.6rem, 1.19rem + 2.07vw, 2.7rem); /* ~26px → 43px */
+  --text-3xl: clamp(1.8rem, 1.22rem + 2.92vw, 3.38rem); /* ~29px → 54px */
+  --text-4xl: clamp(2.03rem, 1.22rem + 4.07vw, 4.22rem); /* ~32px → 68px */
+  --text-5xl: clamp(2.28rem, 1.17rem + 5.54vw, 5.28rem); /* ~36px → 84px */
 }
 
 /* Soft CSS Reset */
