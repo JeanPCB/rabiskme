@@ -1,0 +1,33 @@
+:root {
+  --primary-bg-color: #e3f2fd;
+  --secondary-bg-color: #db5461;
+  --primary-color: #fafafa;
+  /* * Another colors on palette:
+  * #686963
+  * #8aa29e
+  * */
+}
+
+/* Soft CSS Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+/* Custom Styles */
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+}
