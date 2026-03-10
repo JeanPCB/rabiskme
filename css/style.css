@@ -40,6 +40,27 @@ body {
 
 /* Custom Styles */
 body {
-  background-color: var(--primary-bg-color);
-  color: var(--primary-color);
+  background-color: var(--bg-primary-color);
+  color: var(--primay-color);
+}
+
+.sidebar {
+  position: fixed;
+  min-width: 20%;
+  height: 100vh;
+  background-color: #fff;
+  padding: 25px;
+}
+
+.sidebar h1 {
+  margin-bottom: 30px;
+}
+
+.sidebar p {
+  margin-bottom: 15px;
+}
+
+.sidebar input[type="color"] {
+  width: 100%;
+  border: none;
 }
