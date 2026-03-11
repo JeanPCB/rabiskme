@@ -8,6 +8,13 @@ export function getBlockHeight(boardSize) {
   return boardWrapper.offsetHeight / boardSize;
 }
 
+export function createBoard(numBlocks, width, height) {
+  for (let i = 0; i < numBlocks * numBlocks; i++) {
+    const block = createBlock(width, height);
+    addNewBlock(block);
+  }
+}
+
 export function createBlock(width, height) {
   const block = document.createElement("div");
   block.style.width = `${width}px`;
