@@ -16,9 +16,15 @@
       <header>
         <h1>Etch-a-Sketch</h1>
       </header>
-      <p>Brush Color:</p>
+
       <div>
+        <p>Brush Color:</p>
         <input type="color" id="brush-color" />
+      </div>
+
+      <div>
+        <p>Board Size: <span id="board-size-display"></span></p>
+        <input type="range" id="board-size" value="16" min="16" max="64" />
       </div>
     </aside>
     <script src="./js/main.js"></script>
