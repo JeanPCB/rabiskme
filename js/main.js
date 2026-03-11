@@ -1,3 +1,7 @@
-import { onBoardSizerChange, setBoardSizeDisplay } from "./menu.js";
+import {
+  onBoardSizerChange,
+  setBoardSizeDisplay,
+  getBoardSize,
+} from "./menu.js";
 
-onBoardSizerChange(setBoardSizeDisplay);
+import { getBlockWidth, getBlockHeight, createBlock } from "./drawBoard.js";

@@ -10,6 +10,6 @@ export function setBoardSizeDisplay() {
   boardSizeDisplay.textContent = `${boardSizer.value} x ${boardSizer.value}`;
 }
 
-function getBoardSize() {
+export function getBoardSize() {
   return boardSizer.value;
 }
