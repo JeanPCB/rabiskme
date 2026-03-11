@@ -70,8 +70,15 @@ div {
 }
 
 #board-wrapper {
+  display: flex;
+  flex-flow: row wrap;
   background-color: lightcoral;
   width: 960px;
   aspect-ratio: 1.33 / 1;
   margin: auto;
+}
+
+.block {
+  background-color: #fff;
+  margin: 0;
 }
