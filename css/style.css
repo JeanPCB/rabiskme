@@ -42,16 +42,16 @@ body {
 body {
   background-color: var(--bg-primary-color);
   color: var(--primay-color);
+  display: flex;
 }
 
 .sidebar {
-  position: fixed;
-  min-width: 20%;
+  display: flex;
+  flex: 0 1 20%;
+  flex-direction: column;
   height: 100vh;
   background-color: #fff;
   padding: 25px;
-  display: flex;
-  flex-direction: column;
   gap: 2rem;
 }
 
@@ -67,4 +67,11 @@ div {
 .sidebar input {
   width: 100%;
   border: none;
+}
+
+#board-wrapper {
+  background-color: lightcoral;
+  width: 960px;
+  aspect-ratio: 1.33 / 1;
+  margin: auto;
 }
