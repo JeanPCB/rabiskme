@@ -10,7 +10,8 @@ export function getBlockHeight(boardSize) {
 
 export function createBlock(width, height) {
   const block = document.createElement("div");
-  block.offSetWidth = width;
-  block.offsetHeight = height;
+  block.style.width = `${width}px`;
+  block.style.height = `${height}px`;
+  block.className = "block";
   return block;
 }
