@@ -1,11 +1,11 @@
 const boardWrapper = document.querySelector("#board-wrapper");
 
 export function getBlockWidth(boardSize) {
-  return boardWrapper.offSetWidth / boardSize;
+  return boardWrapper.offsetWidth / boardSize;
 }
 
 export function getBlockHeight(boardSize) {
-  return boardWrapper.offSetHeight / boardSize;
+  return boardWrapper.offsetHeight / boardSize;
 }
 
 export function createBlock(width, height) {
