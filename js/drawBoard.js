@@ -15,3 +15,7 @@ export function createBlock(width, height) {
   block.className = "block";
   return block;
 }
+
+export function addNewBlock(block) {
+  boardWrapper.appendChild(block);
+}
