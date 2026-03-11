@@ -11,5 +11,5 @@ export function setBoardSizeDisplay() {
 }
 
 export function getBoardSize() {
-  return boardSizer.value;
+  return Number(boardSizer.value);
 }
