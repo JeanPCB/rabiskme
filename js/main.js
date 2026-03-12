@@ -2,7 +2,7 @@ import {
   onBoardSizerChange,
   onColorChange,
   onQuickColSel,
-  onRainbowMode,
+  rainbowMode,
   setBoardSizeDisplay,
   getBoardSize,
   getBrushColor,
@@ -18,12 +18,16 @@ import {
 
 let boardSideSize = getBoardSize();
 let blockSideSize = getBlockSideSize(boardSideSize);
+let lastBrushColor = getBrushColor();
 
 createBoard(boardSideSize, blockSideSize);
 setBoardSizeDisplay();
-initializeBrush(getBrushColor());
+initializeBrush(lastBrushColor);
 
-onColorChange(() => initializeBrush(getBrushColor()));
+onColorChange(() => {
+  lastBrushColor = getBrushColor();
+  initializeBrush(lastBrushColor);
+});
 
 onBoardSizerChange(() => {
   removeBoard();
@@ -44,6 +48,10 @@ onQuickColSel((e) => {
   }
 });
 
-onRainbowMode(() => {
-  initializeBrush("rainbow");
+rainbowMode((isActive) => {
+  if (isActive) {
+    initializeBrush("rainbow");
+  } else {
+    initializeBrush(lastBrushColor);
+  }
 });

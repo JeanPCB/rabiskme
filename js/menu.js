@@ -4,21 +4,30 @@ const boardSizeDisplay = sidebar.querySelector("#board-size-display");
 const brushColorPick = sidebar.querySelector("#brush-color");
 const quickColContainer = sidebar.querySelector("#quick-col-container");
 const rainbowBtn = sidebar.querySelector("#rainbow-btn");
+let isRanbowMode = false;
 
 export function onBoardSizerChange(callback) {
   boardSizer.addEventListener("input", callback);
 }
 
 export function onColorChange(callback) {
-  brushColorPick.addEventListener("input", callback);
+  brushColorPick.addEventListener("change", callback);
 }
 
 export function onQuickColSel(callback) {
   quickColContainer.addEventListener("click", callback);
 }
 
-export function onRainbowMode(callback) {
-  rainbowBtn.addEventListener("click", callback);
+export function rainbowMode(callback) {
+  rainbowBtn.addEventListener("click", () => {
+    isRanbowMode = !isRanbowMode;
+
+    rainbowBtn.textContent = isRanbowMode
+      ? "Rainbow Mode ON"
+      : "Rainbow Mode OFF";
+
+    callback(isRanbowMode);
+  });
 }
 
 export function setBoardSizeDisplay() {

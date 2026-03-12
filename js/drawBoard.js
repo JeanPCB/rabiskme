@@ -1,6 +1,7 @@
 const boardWrapper = document.querySelector("#board-wrapper");
 let isMouseDown = false;
 let currentColor = null;
+let lastPaintedBlock = null;
 
 document.addEventListener("mousedown", () => (isMouseDown = true));
 document.addEventListener("mouseup", () => (isMouseDown = false));
@@ -15,7 +16,10 @@ boardWrapper.addEventListener("mousedown", (e) => {
 
 boardWrapper.addEventListener("mousemove", (e) => {
   if (isMouseDown && e.target.classList.contains("block")) {
-    paintBlock(e.target, currentColor);
+    if (e.target !== lastPaintedBlock) {
+      paintBlock(e.target, currentColor);
+      lastPaintedBlock = e.target;
+    }
   }
 });
 
