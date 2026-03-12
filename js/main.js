@@ -4,25 +4,18 @@ import {
   getBoardSize,
 } from "./menu.js";
 
-import {
-  getBlockWidth,
-  getBlockHeight,
-  createBoard,
-  removeBoard,
-} from "./drawBoard.js";
+import { getBlockSideSize, createBoard, removeBoard } from "./drawBoard.js";
 
-let boardSize = 16;
-let blockWidth = getBlockWidth(boardSize);
-let blockHeight = getBlockHeight(boardSize);
-createBoard(boardSize, blockWidth, blockHeight);
+let boardSideSize = 16;
+let blockSideSize = getBlockSideSize(boardSideSize);
+createBoard(boardSideSize, blockSideSize);
 setBoardSizeDisplay();
 
 onBoardSizerChange(() => {
-  removeBoard(boardSize);
-  boardSize = getBoardSize();
-  blockWidth = getBlockWidth(boardSize);
-  blockHeight = getBlockHeight(boardSize);
+  removeBoard(boardSideSize);
+  boardSideSize = getBoardSize();
+  blockSideSize = getBlockSideSize(boardSideSize);
 
-  createBoard(boardSize, blockWidth, blockHeight);
+  createBoard(boardSideSize, blockSideSize);
   setBoardSizeDisplay();
 });
