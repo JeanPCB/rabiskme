@@ -2,6 +2,7 @@ import {
   onBoardSizerChange,
   onColorChange,
   onQuickColSel,
+  onRainbowMode,
   setBoardSizeDisplay,
   getBoardSize,
   getBrushColor,
@@ -41,4 +42,8 @@ onQuickColSel((e) => {
     setBrushColor(elColor);
     initializeBrush(elColor);
   }
+});
+
+onRainbowMode(() => {
+  initializeBrush("rainbow");
 });

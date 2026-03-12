@@ -53,5 +53,20 @@ export function addNewBlock(parent, block) {
 }
 
 function paintBlock(block, color) {
-  block.style.backgroundColor = color;
+  if (color === "rainbow") {
+    const rainbowColors = [
+      "#ffb3ba",
+      "#ffdfba",
+      "#ffffba",
+      "#baffc9",
+      "#bae1ff",
+      "#e0bbe4",
+    ];
+
+    const randColor =
+      rainbowColors[Math.floor(Math.random * rainbowColors.length)];
+    block.style.backgroundColor = randColor;
+  } else {
+    block.style.backgroundColor = color;
+  }
 }

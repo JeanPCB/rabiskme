@@ -3,6 +3,7 @@ const boardSizer = sidebar.querySelector("#board-sizer");
 const boardSizeDisplay = sidebar.querySelector("#board-size-display");
 const brushColorPick = sidebar.querySelector("#brush-color");
 const quickColContainer = sidebar.querySelector("#quick-col-container");
+const rainbowBtn = sidebar.querySelector("#rainbow-btn");
 
 export function onBoardSizerChange(callback) {
   boardSizer.addEventListener("input", callback);
@@ -14,6 +15,10 @@ export function onColorChange(callback) {
 
 export function onQuickColSel(callback) {
   quickColContainer.addEventListener("click", callback);
+}
+
+export function onRainbowMode(callback) {
+  rainbowBtn.addEventListener("click", callback);
 }
 
 export function setBoardSizeDisplay() {
