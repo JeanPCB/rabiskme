@@ -76,6 +76,7 @@ div {
   width: 60%;
   aspect-ratio: 1.33 / 1;
   margin: auto;
+  border: var(--bg-secondary-color) 5px solid;
 }
 
 .block {
