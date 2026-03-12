@@ -1,7 +1,8 @@
 :root {
   --bg-primary-color: #e3f2fd;
   --bg-secondary-color: #d1d5db;
-  --primay-color: #1e2939;
+  --primary-color: #1e2939;
+  --secondary-color: #8b5cf6;
 
   /* 
    * Fluid Type Scale — clamp(MIN, FLUID, MAX)
@@ -41,7 +42,7 @@ body {
 /* Custom Styles */
 body {
   background-color: var(--bg-primary-color);
-  color: var(--primay-color);
+  color: var(--primary-color);
   display: flex;
 }
 
@@ -55,6 +56,10 @@ body {
   gap: 2rem;
 }
 
+.sidebar > * {
+  width: 100%;
+}
+
 .sidebar h1 {
   margin-bottom: 30px;
 }
@@ -66,10 +71,12 @@ div {
 
 .sidebar input {
   width: 100%;
-  border: none;
+  border: 2px solid var(--bg-secondary-color);
+  border-radius: 5px;
 }
 
-.sidebar input:hover {
+.sidebar input:hover,
+.sidebar button:hover {
   cursor: pointer;
 }
 
@@ -90,6 +97,17 @@ div {
 
 .quick-color:hover {
   cursor: pointer;
+}
+
+#rainbow-btn {
+  color: var(--secondary-color);
+  font-weight: 900;
+  font-size: var(--text-base);
+  width: 100%;
+  padding: 10px;
+  background-color: var(--bg-primary-color);
+  border: 2px solid var(--bg-secondary-color);
+  border-radius: 5px;
 }
 
 #board-wrapper {
