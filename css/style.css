@@ -96,7 +96,7 @@ div {
   display: flex;
   flex-flow: row wrap;
   background-color: #fff;
-  width: 60%;
+  width: 50%;
   aspect-ratio: 1.33 / 1;
   margin: auto;
   border: var(--bg-secondary-color) 5px solid;
