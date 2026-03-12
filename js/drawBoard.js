@@ -17,10 +17,10 @@ export function removeBoard(numBlocks) {
   }
 }
 
-export function createBlock(width, height) {
+export function createBlock(blockSideSize) {
   const block = document.createElement("div");
-  block.style.width = `${width}%`;
-  block.style.height = `${height}%`;
+  block.style.width = `${blockSideSize}%`;
+  block.style.height = `${blockSideSize}%`;
   block.className = "block";
   return block;
 }
