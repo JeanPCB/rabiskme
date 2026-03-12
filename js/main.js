@@ -12,7 +12,7 @@ createBoard(boardSideSize, blockSideSize);
 setBoardSizeDisplay();
 
 onBoardSizerChange(() => {
-  removeBoard(boardSideSize);
+  removeBoard();
   boardSideSize = getBoardSize();
   blockSideSize = getBlockSideSize(boardSideSize);
 

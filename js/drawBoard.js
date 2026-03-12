@@ -5,16 +5,18 @@ export function getBlockSideSize(boardSideSize) {
 }
 
 export function createBoard(numBlocks, blockSideSize) {
+  const boardFragment = document.createDocumentFragment();
+
   for (let i = 0; i < numBlocks * numBlocks; i++) {
     const block = createBlock(blockSideSize);
-    addNewBlock(block);
+    addNewBlock(boardFragment, block);
   }
+
+  boardWrapper.appendChild(boardFragment);
 }
 
-export function removeBoard(numBlocks) {
-  for (let i = 0; i < numBlocks * numBlocks; i++) {
-    boardWrapper.lastChild.remove();
-  }
+export function removeBoard() {
+  boardWrapper.innerHTML = "";
 }
 
 export function createBlock(blockSideSize) {
@@ -25,6 +27,6 @@ export function createBlock(blockSideSize) {
   return block;
 }
 
-export function addNewBlock(block) {
-  boardWrapper.appendChild(block);
+export function addNewBlock(parent, block) {
+  parent.appendChild(block);
 }
