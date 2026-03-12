@@ -4,9 +4,9 @@ export function getBlockSideSize(boardSideSize) {
   return 100 / boardSideSize;
 }
 
-export function createBoard(numBlocks, width, height) {
+export function createBoard(numBlocks, blockSideSize) {
   for (let i = 0; i < numBlocks * numBlocks; i++) {
-    const block = createBlock(width, height);
+    const block = createBlock(blockSideSize);
     addNewBlock(block);
   }
 }
