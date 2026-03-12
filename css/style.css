@@ -79,6 +79,7 @@ div {
 }
 
 .block {
+  flex-grow: 1;
   background-color: #fff;
   margin: 0;
 }
