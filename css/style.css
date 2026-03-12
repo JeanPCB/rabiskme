@@ -69,6 +69,10 @@ div {
   border: none;
 }
 
+.sidebar input:hover {
+  cursor: pointer;
+}
+
 #quick-col-container {
   display: flex;
   flex-flow: row wrap;
