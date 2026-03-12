@@ -1,9 +1,11 @@
 import {
   onBoardSizerChange,
   onColorChange,
+  onQuickColSel,
   setBoardSizeDisplay,
   getBoardSize,
   getBrushColor,
+  setBrushColor,
 } from "./menu.js";
 
 import {
@@ -29,4 +31,14 @@ onBoardSizerChange(() => {
 
   createBoard(boardSideSize, blockSideSize);
   setBoardSizeDisplay();
+});
+
+onQuickColSel((e) => {
+  const el = e.target;
+  const elColor = el.style.backgroundColor;
+
+  if (el.classList.contains("quick-color")) {
+    setBrushColor(elColor);
+    initializeBrush(elColor);
+  }
 });
