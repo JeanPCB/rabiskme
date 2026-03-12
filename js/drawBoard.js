@@ -1,24 +1,26 @@
 const boardWrapper = document.querySelector("#board-wrapper");
+let isMouseDown = false;
+let currentColor = null;
+
+document.addEventListener("mousedown", () => (isMouseDown = true));
+document.addEventListener("mouseup", () => (isMouseDown = false));
+
+boardWrapper.addEventListener("mousedown", (e) => {
+  isMouseDown = true;
+  e.preventDefault();
+  if (e.target.classList.contains("block")) {
+    paintBlock(e.target, currentColor);
+  }
+});
+
+boardWrapper.addEventListener("mousemove", (e) => {
+  if (isMouseDown && e.target.classList.contains("block")) {
+    paintBlock(e.target, currentColor);
+  }
+});
 
 export function initializeBrush(color) {
-  let isMouseDown = false;
-
-  document.addEventListener("mousedown", () => (isMouseDown = true));
-  document.addEventListener("mouseup", () => (isMouseDown = false));
-
-  boardWrapper.addEventListener("mousedown", (e) => {
-    isMouseDown = true;
-    e.preventDefault();
-    if (e.target.classList.contains("block")) {
-      paintBlock(e.target, color);
-    }
-  });
-
-  boardWrapper.addEventListener("mousemove", (e) => {
-    if (isMouseDown && e.target.classList.contains("block")) {
-      paintBlock(e.target, color);
-    }
-  });
+  currentColor = color;
 }
 
 export function getBlockSideSize(boardSideSize) {
