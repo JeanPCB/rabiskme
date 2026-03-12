@@ -7,14 +7,21 @@ import {
 import {
   getBlockWidth,
   getBlockHeight,
-  createBlock,
   createBoard,
+  removeBoard,
 } from "./drawBoard.js";
 
+let boardSize = 16;
+let blockWidth = getBlockWidth(boardSize);
+let blockHeight = getBlockHeight(boardSize);
+createBoard(boardSize, blockWidth, blockHeight);
+setBoardSizeDisplay();
+
 onBoardSizerChange(() => {
-  const boardSize = getBoardSize();
-  const blockWidth = getBlockWidth(boardSize);
-  const blockHeight = getBlockHeight(boardSize);
+  removeBoard(boardSize);
+  boardSize = getBoardSize();
+  blockWidth = getBlockWidth(boardSize);
+  blockHeight = getBlockHeight(boardSize);
 
   createBoard(boardSize, blockWidth, blockHeight);
   setBoardSizeDisplay();
