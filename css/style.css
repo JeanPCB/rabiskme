@@ -69,6 +69,20 @@ div {
   border: none;
 }
 
+#quick-col-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5%;
+}
+
+.quick-color {
+  width: 20%;
+  background-color: #1e2939;
+  aspect-ratio: 1;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
 #board-wrapper {
   display: flex;
   flex-flow: row wrap;
