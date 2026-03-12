@@ -15,6 +15,12 @@ export function createBoard(numBlocks, width, height) {
   }
 }
 
+export function removeBoard(numBlocks) {
+  for (let i = 0; i < numBlocks * numBlocks; i++) {
+    boardWrapper.lastChild.remove();
+  }
+}
+
 export function createBlock(width, height) {
   const block = document.createElement("div");
   block.style.width = `${width}px`;
