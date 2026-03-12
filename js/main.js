@@ -13,8 +13,9 @@ import {
   initializeBrush,
 } from "./drawBoard.js";
 
-let boardSideSize = 16;
+let boardSideSize = getBoardSize();
 let blockSideSize = getBlockSideSize(boardSideSize);
+
 createBoard(boardSideSize, blockSideSize);
 setBoardSizeDisplay();
 initializeBrush(getBrushColor());
