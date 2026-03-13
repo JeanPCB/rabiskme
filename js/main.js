@@ -28,7 +28,7 @@ initializeBrush(lastBrushColor);
 
 onColorChange(() => {
   lastBrushColor = getBrushColor();
-  initializeBrush(lastBrushColor);
+  initializeBrush(lastBrushColor, "colorPicker");
 });
 
 onBoardSizerChange(() => {
@@ -46,13 +46,13 @@ onQuickColSel((e) => {
 
   if (el.classList.contains("quick-color")) {
     setBrushColor(elColor);
-    initializeBrush(elColor);
+    initializeBrush(elColor, "quickColor");
   }
 });
 
-onRainbowMode(() => initializeBrush("rainbow"));
+onRainbowMode(() => initializeBrush("rainbow", "rainbowMode"));
 
-onEraserMode(() => initializeBrush("#fff"));
+onEraserMode(() => initializeBrush("#fff", "eraserMode"));
 
 onClearMode(() => {
   if (confirm("Do you reall want to clear the board?")) {

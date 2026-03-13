@@ -1,4 +1,6 @@
 const boardWrapper = document.querySelector("#board-wrapper");
+const rainbowBtn = document.querySelector("#rainbow-btn");
+const eraserBtn = document.querySelector("#eraser-btn");
 let isMouseDown = false;
 let currentColor = null;
 let lastPaintedBlock = null;
@@ -23,8 +25,18 @@ boardWrapper.addEventListener("mousemove", (e) => {
   }
 });
 
-export function initializeBrush(color) {
+export function initializeBrush(color, caller) {
+  updateModeVisual(caller, "rainbowMode", rainbowBtn.classList);
+  updateModeVisual(caller, "eraserMode", eraserBtn.classList);
   currentColor = color;
+}
+
+function updateModeVisual(caller, condition, classList) {
+  if (caller === condition) {
+    classList.add("mode-on");
+  } else {
+    classList.remove("mode-on");
+  }
 }
 
 export function getBlockSideSize(boardSideSize) {
