@@ -2,7 +2,7 @@ import {
   onBoardSizerChange,
   onColorChange,
   onQuickColSel,
-  rainbowMode,
+  onRainbowMode,
   setBoardSizeDisplay,
   getBoardSize,
   getBrushColor,
@@ -49,12 +49,6 @@ onQuickColSel((e) => {
   }
 });
 
-rainbowMode((isActive) => {
-  if (isActive) {
-    initializeBrush("rainbow");
-  } else {
-    initializeBrush(lastBrushColor);
-  }
-});
+onRainbowMode(() => initializeBrush("rainbow"));
 
 onEraserMode(() => initializeBrush("#fff"));
