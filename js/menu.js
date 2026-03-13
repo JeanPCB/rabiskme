@@ -6,8 +6,17 @@ const quickColContainer = sidebar.querySelector("#quick-col-container");
 const rainbowBtn = sidebar.querySelector("#rainbow-btn");
 const eraseBtn = sidebar.querySelector("#eraser-btn");
 const clearBtn = sidebar.querySelector("#clear-btn");
+let hasInteractSlider = false;
 
 export function onBoardSizerChange(callback) {
+  boardSizer.addEventListener("mousedown", (e) => {
+    if (!hasInteractSlider) {
+      e.preventDefault();
+      alert("Resizing gonna clear the board!!!");
+      hasInteractSlider = true;
+    }
+  });
+
   boardSizer.addEventListener("input", callback);
 }
 
