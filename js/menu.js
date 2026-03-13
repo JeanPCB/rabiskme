@@ -13,6 +13,7 @@ export function onBoardSizerChange(callback) {
 
 export function onColorChange(callback) {
   brushColorPick.addEventListener("change", callback);
+  brushColorPick.addEventListener("click", callback);
 }
 
 export function onQuickColSel(callback) {
