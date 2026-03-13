@@ -7,6 +7,7 @@ import {
   getBoardSize,
   getBrushColor,
   setBrushColor,
+  onEraserMode,
 } from "./menu.js";
 
 import {
@@ -55,3 +56,5 @@ rainbowMode((isActive) => {
     initializeBrush(lastBrushColor);
   }
 });
+
+onEraserMode(() => initializeBrush("#fff"));

@@ -4,6 +4,7 @@ const boardSizeDisplay = sidebar.querySelector("#board-size-display");
 const brushColorPick = sidebar.querySelector("#brush-color");
 const quickColContainer = sidebar.querySelector("#quick-col-container");
 const rainbowBtn = sidebar.querySelector("#rainbow-btn");
+const eraseBtn = sidebar.querySelector("#eraser-btn");
 let isRanbowMode = false;
 
 export function onBoardSizerChange(callback) {
@@ -28,6 +29,10 @@ export function rainbowMode(callback) {
 
     callback(isRanbowMode);
   });
+}
+
+export function onEraserMode(callback) {
+  eraseBtn.addEventListener("click", callback);
 }
 
 export function setBoardSizeDisplay() {
