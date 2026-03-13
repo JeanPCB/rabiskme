@@ -8,6 +8,7 @@ import {
   getBrushColor,
   setBrushColor,
   onEraserMode,
+  onClearMode,
 } from "./menu.js";
 
 import {
@@ -52,3 +53,10 @@ onQuickColSel((e) => {
 onRainbowMode(() => initializeBrush("rainbow"));
 
 onEraserMode(() => initializeBrush("#fff"));
+
+onClearMode(() => {
+  if (confirm("Do you reall want to clear the board?")) {
+    removeBoard();
+    createBoard(boardSideSize, blockSideSize);
+  }
+});

@@ -116,6 +116,13 @@ div {
 
 #eraser-btn {
   color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+#clear-btn {
+  color: var(--bg-primary-color);
+  background-color: #f13333;
+  border: none;
 }
 
 #board-wrapper {
