@@ -25,6 +25,12 @@ Uma aplicação web Etch-a-Sketch construída com JavaScript puro.
 - **Tamanho Ajustável do Quadro**: Redimensionamento dinâmico da grade de 16x16 a 64x64 blocos
 - **Indicadores Visuais de Modo**: Feedback claro para modos de desenho ativos
 
-## Desenvolvimento
+## Motivação
 
-Este projeto está atualmente na fase de desenvolvimento MVP.
+Este projeto foi desenvolvido como parte do aprendizado em desenvolvimento web front-end, focando em conceitos fundamentais de JavaScript puro. Através da criação desta aplicação Etch-a-Sketch, foram extraídos os seguintes aprendizados principais:
+
+- **Manipulação do DOM**: Criação e modificação dinâmica de elementos HTML via JavaScript para construir a grade de desenho interativa.
+- **Gerenciamento de Eventos**: Implementação de listeners para eventos de mouse, permitindo interação fluida e responsiva com o usuário.
+- **Estilização Dinâmica com CSS**: Aplicação de estilos em tempo real para alterar cores, tamanhos e visuais, incluindo modos especiais como arco-íris.
+- **Lógica de Programação**: Desenvolvimento de algoritmos para gerar grades, ciclos de cores e funcionalidades de borracha, reforçando habilidades em controle de fluxo e loops.
+- **Organização de Código**: Estruturação do código em funções modulares e reutilizáveis para melhor manutenção e legibilidade.

@@ -1,5 +1,7 @@
 # Rabiskme
 
+_[Portuguese Version 🇧🇷](../README.md)_
+
 An Etch-a-Sketch web application built with vanilla JavaScript.
 
 ## Demo
@@ -23,6 +25,12 @@ An Etch-a-Sketch web application built with vanilla JavaScript.
 - **Adjustable Board Size**: Dynamic grid resizing from 16x16 to 64x64 blocks
 - **Visual Mode Indicators**: Clear feedback for active drawing modes
 
-## Development
+## Motivation
 
-This project is currently in MVP development phase.
+This project was developed as part of the learning in front-end web development, focusing on fundamental concepts of vanilla JavaScript. Through the creation of this Etch-a-Sketch application, the following key learnings were extracted:
+
+- **DOM Manipulation**: Creation and dynamic modification of HTML elements via JavaScript to build the interactive drawing grid.
+- **Event Handling**: Implementation of mouse event listeners, allowing smooth and responsive user interaction.
+- **Dynamic Styling with CSS**: Real-time application of styles to change colors, sizes, and visuals, including special modes like rainbow.
+- **Programming Logic**: Development of algorithms to generate grids, color cycles, and eraser functionalities, reinforcing skills in control flow and loops.
+- **Code Organization**: Structuring the code in modular and reusable functions for better maintenance and readability.
