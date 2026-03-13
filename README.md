@@ -1,28 +1,30 @@
 # Rabiskme
 
-An Etch-a-Sketch web application built with vanilla JavaScript.
+_[English Version 🇺🇸](readmes/README-en.md)_
 
-## Demo
+Uma aplicação web Etch-a-Sketch construída com JavaScript puro.
 
-![Demo GIF](assets/images/2026-03-1316-42-48-ezgif.com-video-to-gif-converter.gif)
+## Demonstração
 
-**Live Preview:** [https://rabiskme.netlify.app/](https://rabiskme.netlify.app/)
+![GIF de Demonstração](assets/images/2026-03-1316-42-48-ezgif.com-video-to-gif-converter.gif)
+
+**Prévia ao Vivo:** [https://rabiskme.netlify.app/](https://rabiskme.netlify.app/)
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-## About
+## Sobre
 
-**Rabiskme** is a digital recreation of the classic Etch-a-Sketch toy, implemented as a web application using vanilla JavaScript. It provides an interactive grid-based drawing canvas where users can create artwork with various drawing modes, color options, and adjustable board sizes.
+**Rabiskme** é uma recriação digital do clássico brinquedo Etch-a-Sketch, implementada como uma aplicação web usando JavaScript puro. Fornece uma tela de desenho interativa baseada em grade onde os usuários podem criar arte com vários modos de desenho, opções de cor e tamanhos de quadro ajustáveis.
 
-## Features
+## Funcionalidades
 
-- **Drawing Board**: Interactive grid-based drawing surface
-- **Color Selection**: Custom color picker and quick color palette
-- **Rainbow Mode**: Automatic color cycling for vibrant drawings
-- **Eraser Tool**: Remove drawings with eraser functionality
-- **Adjustable Board Size**: Dynamic grid resizing from 16x16 to 64x64 blocks
-- **Visual Mode Indicators**: Clear feedback for active drawing modes
+- **Quadro de Desenho**: Superfície de desenho interativa baseada em grade
+- **Seleção de Cor**: Seletor de cor personalizado e paleta de cores rápidas
+- **Modo Arco-Íris**: Ciclo automático de cores para desenhos vibrantes
+- **Ferramenta Borracha**: Remover desenhos com funcionalidade de borracha
+- **Tamanho Ajustável do Quadro**: Redimensionamento dinâmico da grade de 16x16 a 64x64 blocos
+- **Indicadores Visuais de Modo**: Feedback claro para modos de desenho ativos
 
-## Development
+## Desenvolvimento
 
-This project is currently in MVP development phase.
+Este projeto está atualmente na fase de desenvolvimento MVP.
